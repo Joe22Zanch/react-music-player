@@ -6,8 +6,8 @@ import Player from "./components/Player";
 import Song from "./components/Song";
 import Library from "./components/Library";
 import Nav from "./components/Nav";
-//utility
-import data from "./util";
+//data
+import data from "./data";
 
 function App() {
   //ref
