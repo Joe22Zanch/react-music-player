@@ -1,6 +1,4 @@
-import { faNewspaper } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
-import {playAudio} from "../util"
 
 const LibrarySong = ({
   song,
@@ -11,10 +9,10 @@ const LibrarySong = ({
   isPlaying,
   setSongs,
 }) => {
-  const songSelectHandler = () => {
+  const songSelectHandler = async () => {
     const selectedSong = songs.filter((state) => state.id === id);
     //console.log(selectedSong);
-    setCurrentSong(selectedSong[0]);
+    await setCurrentSong(selectedSong[0]);
     //active state
     const newSongs = songs.map((song) => {
       if (song.id === id) {
@@ -31,8 +29,7 @@ const LibrarySong = ({
     });
     setSongs(newSongs);
     //check song
-    playAudio(isPlaying,audioRef);
-
+    if (isPlaying) audioRef.current.play();
   };
   return (
     <div
