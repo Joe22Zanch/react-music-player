@@ -1,7 +1,9 @@
 ### React Practice Project
+### `Hosted on`
+https://joe22zanch.github.io/react-music-player/
 
 This project is to help improve my JavaScript skills, learn how to create a website useing react, learn how to style my react project with scss and using GitHub Desktop along the way.
-
+### `npm install`
 ### `npm start`
 
 Runs the app in the development mode.\
